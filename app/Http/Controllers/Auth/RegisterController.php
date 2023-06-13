@@ -29,6 +29,11 @@ class RegisterController extends Controller
      *
      * @var string
      */
+    // if (Gate::allows('admin')) {
+    //     return redirect()->route('admin.dashboard');
+    // } else if (Gate::allows('user')) {
+    //     return redirect()->route('user.dashboard');
+    // }
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
@@ -52,12 +57,10 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'nik' => ['required', 'string', 'max:16'],
-            'no_hp' => ['required', 'string', 'max:13'],
-            'alamat' => ['required', 'string', 'max:255'],
+            'noTelp' => ['required', 'string', 'max:13'],
+            'tanggalLahir' => ['required', 'date'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'is_admin' => ['required', 'integer', 'min:0', 'max:1'],
-
+            'password' => ['required', 'string', 'min:8', 'confirmed']
         ]);
     }
 
@@ -69,10 +72,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if($data['punya_kos'] == '0') $this->redirectTo = '/';
         return User::create([
             'name' => $data['name'],
+            'nik' => $data['nik'],
+            'noTelp' => $data['noTelp'],
+            'tanggalLahir' => $data['tanggalLahir'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'is_admin' =>  $data['punya_kos'],
         ]);
     }
 }

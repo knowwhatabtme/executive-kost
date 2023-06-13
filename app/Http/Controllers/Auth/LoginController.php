@@ -36,5 +36,6 @@ class LoginController extends Controller
     public function __construct()
     {  
         $this->middleware('guest')->except('logout');
+        if(!empty(auth()->user())) if(auth()->user()->is_admin == '1') $this->redirectTo = RouteServiceProvider::HOME;
     }
 }

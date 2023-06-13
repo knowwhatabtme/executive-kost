@@ -17,6 +17,9 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->tinyInteger('is_admin')->default(0);
             $table->string('name');
+            $table->string('nik')->unique();
+            $table->string('noTelp');
+            $table->date('tanggalLahir');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

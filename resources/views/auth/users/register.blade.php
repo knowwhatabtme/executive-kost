@@ -78,23 +78,17 @@
                         </div>
                     </div>
                 </div> --}}
-
                 <section class="aubna-blog-area section_50">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 text-center">
-                            @if(request('punya-kos', '0')=='0')
-                                <h1>Registrasi Penyewa Kos</h1>
-                            @else
-                                <h1>Registrasi Pemilik Kos</h1>
-                            @endif                               
+                                <h1>Registrasi</h1>
                                 <hr style="border: 0.5px solid #F86D08;">
                             </div>
 
                             <div class="col-lg-12">
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
-                                    <input type="hidden" name="punya_kos" value="{{ request('punya-kos', '0') }}">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nama</label>
                                         <input id="name" type="text"
@@ -112,7 +106,6 @@
                                         <input id="nik" type="number"
                                             class="form-control @error('nik') is-invalid @enderror" name="nik"
                                             value="{{ old('nik') }}" required autocomplete="nik" autofocus>
-
                                         @error('nik')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -124,7 +117,6 @@
                                         <input id="noTelp" type="number"
                                             class="form-control @error('noTelp') is-invalid @enderror" name="noTelp"
                                             value="{{ old('noTelp') }}" required autocomplete="noTelp" autofocus>
-
                                         @error('noTelp')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -137,7 +129,6 @@
                                             class="form-control @error('tanggalLahir') is-invalid @enderror"
                                             name="tanggalLahir" value="{{ old('tanggalLahir') }}" required
                                             autocomplete="tanggalLahir">
-
                                         @error('tanggalLahir')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -157,7 +148,7 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="password" class="form-label">password</label>
+                                        <label for="password" class="form-label">Password</label>
                                         <input id="password" type="password"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
                                             required autocomplete="new-password">
@@ -169,17 +160,21 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                        <label for="password-confirm" class="form-label">Confirm Password</label>
+                                        <input id="password-confirm" type="password"
+                                            class="form-control @error('password') is-invalid @enderror" name="password_confirmation"
+                                            required autocomplete="new-password">
+
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Register') }}
                                     </button>
                                 </form>
-                                <p class="mt-2">Sudah punya akun ?</p>
-                                <a class="btn btn-primary" href="/login">
-                                    Login
-                                </a>
                             </div>
                         </div>
                 </section>

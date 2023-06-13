@@ -78,23 +78,18 @@
                         </div>
                     </div>
                 </div> --}}
-
                 <section class="aubna-blog-area section_50">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 text-center">
-                            @if(request('punya-kos', '0')=='0')
-                                <h1>Registrasi Penyewa Kos</h1>
-                            @else
-                                <h1>Registrasi Pemilik Kos</h1>
-                            @endif                               
+                                <h1>Registrasi</h1>
                                 <hr style="border: 0.5px solid #F86D08;">
                             </div>
 
                             <div class="col-lg-12">
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
-                                    <input type="hidden" name="punya_kos" value="{{ request('punya-kos', '0') }}">
+
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nama</label>
                                         <input id="name" type="text"
@@ -169,17 +164,16 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                
+                                            <div class="col-md-6">
+                                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                            </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Register') }}
                                     </button>
                                 </form>
-                                <p class="mt-2">Sudah punya akun ?</p>
-                                <a class="btn btn-primary" href="/login">
-                                    Login
-                                </a>
                             </div>
                         </div>
                 </section>
