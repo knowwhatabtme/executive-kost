@@ -17,21 +17,21 @@
     <section class="aubna-welcome-area">
         <!--Content before waves-->
         <div class="container text-center">
-           <div class="align-items-center justify-content-between ">
-              <div class="inner-header">
-                <div class="row">
-                   <div class="col">
-                      <div class="welcome-left">
-                        <h1>Veteran Kos</h1>
-                        <p>Kosan siap huni di sekitar kampus UPNVJ</p>
-                      </div>
-                   </div>
-                </div>
-                 {{-- <div class="inner-content">
+            <div class="align-items-center justify-content-between ">
+                <div class="inner-header">
+                    <div class="row">
+                        <div class="col">
+                            <div class="welcome-left">
+                                <h1>Veteran Kos</h1>
+                                <p>Kosan siap huni di sekitar kampus UPNVJ</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class="inner-content">
                     
                  </div> --}}
-              </div>
-           </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="aubna-blog-area section_100">
@@ -100,7 +100,7 @@
     </section>
 
 
-    @include('frontend.partials.footer')
+    {{-- @include('frontend.partials.footer') --}}
     @include('frontend.partials.script')
     @yield('scripts')
 

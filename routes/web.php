@@ -41,32 +41,38 @@ Auth::routes([
     'verify' =>false,
 ]);
 
+Route::middleware(['auth', 'can:user'])->group(function () {
+
+});
+
+Route::middleware(['auth', 'can:admin'])->group(function () {
+    Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+
+    // User Routes
+    
+    Route::get('/daftarwarga', 'App\Http\Controllers\DaftarWargaController@index')->name('daftarwarga.index');
+    
+    Route::get('/daftarwarga/create', 'App\Http\Controllers\DaftarWargaController@create')->name('daftarwarga.create');
+    
+    Route::post('/daftarwarga', 'App\Http\Controllers\DaftarWargaController@store')->name('daftarwarga.store');
+    
+    Route::get('/daftarwarga/{id}', 'App\Http\Controllers\DaftarWargaController@destroy')->name('daftarwarga.destroy');
+    
+    // Admin Routes
+    
+    Route::get('/daftaradmin', 'App\Http\Controllers\DaftarAdminController@index')->name('manage-admin.index');
+    
+    // Post Routes
+    
+    Route::get('/managepost', 'App\Http\Controllers\PostManageController@index')->name('managepost.index');
+    
+    Route::get('/managepost/create', 'App\Http\Controllers\PostManageController@create')->name('managepost.create');
+    
+    Route::post('/managepost', 'App\Http\Controllers\PostManageController@store')->name('managepost.store');
+    
+    Route::get('/managepost/{id}', 'App\Http\Controllers\PostManageController@destroy')->name('managepost.destroy');
+});
+
 Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout1');
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
-
-// User Routes
-
-Route::get('/daftarwarga', 'App\Http\Controllers\DaftarWargaController@index')->name('daftarwarga.index');
-
-Route::get('/daftarwarga/create', 'App\Http\Controllers\DaftarWargaController@create')->name('daftarwarga.create');
-
-Route::post('/daftarwarga', 'App\Http\Controllers\DaftarWargaController@store')->name('daftarwarga.store');
-
-Route::get('/daftarwarga/{id}', 'App\Http\Controllers\DaftarWargaController@destroy')->name('daftarwarga.destroy');
-
-// Admin Routes
-
-Route::get('/daftaradmin', 'App\Http\Controllers\DaftarAdminController@index')->name('manage-admin.index');
-
-// Post Routes
-
-Route::get('/managepost', 'App\Http\Controllers\PostManageController@index')->name('managepost.index');
-
-Route::get('/managepost/create', 'App\Http\Controllers\PostManageController@create')->name('managepost.create');
-
-Route::post('/managepost', 'App\Http\Controllers\PostManageController@store')->name('managepost.store');
-
-Route::get('/managepost/{id}', 'App\Http\Controllers\PostManageController@destroy')->name('managepost.destroy');
-
-
+// Route::get('/login', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login1');
