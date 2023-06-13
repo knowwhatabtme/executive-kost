@@ -35,7 +35,7 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="align-items-center text-center">
-                        <a href="#" class="btn btn-secondary btn-lg">Mulai Mencari kost</a>
+                        <a href="127.0.0.1:8000/login" class="btn btn-secondary btn-lg">Mulai Mencari kost</a>
                     </div>
                 </div>
             </div>
