@@ -5,7 +5,7 @@
         <div class="col">
             <div class="card mb-grid">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="card-header-title">Daftar Posting</div>
+                    <div class="card-header-title">Daftar Kost</div>
                     <div class="justify-content-end m-0 p-0">
                         <a class="btn btn-sm btn-labeled-right btn-success" data-bs-toggle="modal"
                             data-bs-target="#ModalPosts">
@@ -19,7 +19,7 @@
                                 </svg>
                             </span>
                             <span class="btn-text">
-                                Tambah Postingan
+                                Tambah Kost
                             </span>
                         </a>
                     </div>
@@ -54,9 +54,7 @@
                                     </th>
                                     <td>{{ $w->title }}</td>
                                     <td>{{ $w->created_at->format('d-m-Y') }}</td>
-                                    <td><a href="
-                      {{-- {{ route('managepost.destroy', ["id" => $w->id ]) }} --}}
-                      "
+                                    <td><a href="#"
                                             class="btn btn-sm btn-primary">Edit</a></td>
                                     <td>
                                         <a href="{{ route('managepost.destroy', ['id' => $w->id]) }}"
