@@ -34,9 +34,13 @@
                                         <span class="custom-control-indicator"></span>
                                     </label>
                                 </th>
-                                <th scope="col">Judul</th>
+                                {{-- <th scope="col">Judul</th>
                                 <th scope="col">Post pertama pada</th>
                                 <th scope="col">Edit Post</th>
+                                <th scope="col">Action</th> --}}
+                                <th scope="col">Nama Kos</th>
+                                <th scope="col">status</th>
+                                <th scope="col">Edit kost</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
