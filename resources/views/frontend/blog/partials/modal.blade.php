@@ -47,7 +47,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <button type="button" class="btn btn-success btn-lg">Hubungi</button>
+                  <a type="button" class="btn btn-success btn-lg" href="https://wa.me/<?php echo $w->noTelp; ?>?text=Halo%20apakah%20untuk%20kost%20<?php echo $w->title; ?>%20masih%20ada%201%20kamar%20%3F">Hubungi</a>
                 </div>
               </div>
             </div>
