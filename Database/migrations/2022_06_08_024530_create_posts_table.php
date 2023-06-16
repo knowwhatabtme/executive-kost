@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('pemilik_id');
+            $table->string('pemilik_nik');
             $table->string('title');
             $table->string('category_id');
             $table->string('max_lantai');
@@ -28,7 +28,7 @@ class CreatePostsTable extends Migration
             $table->string('maps');
             $table->string('harga');
             $table->string('picture');
-            $table->foreign('pemilik_id')->references('id')->on('users');
+            $table->foreign('pemilik_nik')->references('nik')->on('users');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
