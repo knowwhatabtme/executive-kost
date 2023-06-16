@@ -77,8 +77,8 @@
                                             <img src="{{ asset('aubna') }}/assets/img/blog-2.jpg" class="card-img-top" alt="...">
                                             </div>
                                             <div class="row mb-2">
-                                                <a type="button" class="btn btn-success btn-lg" href="https://wa.me/<?php echo $p->pemilik->noTelp ?>?text=Halo%20apakah%20untuk%20kost%20<?php echo $p->title; ?>%20masih%20ada%201%20kamar%20%3F">Maps</a>
-                                            {{ $p->maps }}
+                                                <a type="button" class="btn btn-success btn-lg" href="{{ $p->maps }}">Lokasi Tempat</a>
+                                            
                                             </div>
                                         </div>
                                         <div class="col">
