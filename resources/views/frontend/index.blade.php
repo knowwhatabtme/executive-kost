@@ -23,6 +23,8 @@
     </section>
     <!-- Welcome Area End -->
 
+    
+
     <!-- Blog Area Start -->
     <section class="aubna-blog-area section_100">
         <div class="container">

@@ -1,6 +1,6 @@
 <!--Navbar Start-->
 @include('frontend.partials.modal')
-@include('frontend.partials.userModal')
+{{-- @include('frontend.partials.userModal') --}}
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <!-- LOGO -->
