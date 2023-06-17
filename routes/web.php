@@ -27,9 +27,6 @@ Route::get('/', function () {
 })->name('beranda');
 
 
-Route::get('/blog', 'App\Http\Controllers\PostController@index')->name('blog.index');
-
-
 Auth::routes();
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
@@ -69,8 +66,14 @@ Route::middleware(['auth', 'can:admin'])->group(function () {
     Route::get('/managepost/create', 'App\Http\Controllers\PostManageController@create')->name('managepost.create');
     
     Route::post('/managepost', 'App\Http\Controllers\PostManageController@store')->name('managepost.store');
+
+    Route::get('/managepost/{id}/edit', 'App\Http\Controllers\PostManageController@edit')->name('managepost.edit');
+
+    Route::put('/managepost/{id}', 'App\Http\Controllers\PostManageController@update')->name('managepost.update');
     
     Route::get('/managepost/{id}', 'App\Http\Controllers\PostManageController@destroy')->name('managepost.destroy');
+
+    Route::get('/blog', 'App\Http\Controllers\PostController@index')->name('blog.index');
 });
 
 Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout1');

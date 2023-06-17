@@ -37,10 +37,18 @@
                         </div>
                     </div>
                     <div class="align-items-center text-center">
-                        <a href="/login" class="btn btn-secondary btn-lg">Mulai Mencari kost</a>
+                        <a href="/blog" class="btn btn-secondary btn-lg">Mulai Mencari kost</a>
                     </div>
                 </div>
             </div>
     </section>
     <!-- Blog Area End -->
+
+    {{-- Modal user --}}
+    <!-- Button trigger modal -->
+    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button> --}}
+    
+    
 @endsection

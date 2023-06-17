@@ -83,6 +83,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 text-center">
+                            <a href="/"><i class="bi bi-arrow-left"></i></a>
+                            
                             @if(request('punya-kos', '0')=='0')
                                 <h1>Registrasi Penyewa Kos</h1>
                             @else
@@ -143,6 +145,10 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="alamat" class="form-label">Alamat</label>
+                                        <textarea id="alamat" type="Text" class="form-control" name="alamat"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
