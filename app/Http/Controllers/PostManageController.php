@@ -51,7 +51,7 @@ class PostManageController extends Controller
         $checkboxFkos = $request->input('checkbox1');
         $checkboxFsekitar = $request->input('checkbox3');
         $mapsInput = $request->input('maps');
-        $harga = $request->input('harga');
+        // $harga = $request->input('harga');
 
 
         if (!is_array($checkboxTransport)) {
