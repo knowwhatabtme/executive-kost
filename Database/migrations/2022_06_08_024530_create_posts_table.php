@@ -18,7 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('nik_user');
             $table->string('namaKos');
             $table->text('desc');
-            $table->string('jenisKos')->nullable();
+            $table->string('region');
+            $table->string('jenisKos');
             $table->string('jumLantai');
             $table->string('jumKamar');
             $table->string('jumKamarMandi');
@@ -45,4 +46,3 @@ class CreatePostsTable extends Migration
         Schema::dropIfExists('posts');
     }
 }
-
