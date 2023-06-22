@@ -24,6 +24,7 @@ class CreatePostsTable extends Migration
             $table->string('jumKamar');
             $table->string('jumKamarMandi');
             $table->string('address');
+            $table->string('jarakKampus');
             $table->string('jalurTransport');
             $table->string('fasilitas_kamar');
             $table->string('fasilitas_sekitar');

@@ -43,6 +43,16 @@
                           </select>
                       </div>
                       <div class="mb-3">
+                          <label for="jarakKampus" class="form-label">Jarak Kampus</label>
+                          <select class="form-select" id="jarakKampus" aria-label="Default select example"
+                              name="jarakKampus">
+                              <option selected>Open this select menu</option>
+                              <option value="1KM">1KM</option>
+                              <option value="2KM">2KM</option>
+                              <option value="3KM">3KM</option>
+                          </select>
+                      </div>
+                      <div class="mb-3">
                           <label for="region" class="form-label">Region Kampus</label>
                           <select class="form-select" id="region" aria-label="Default select example" name="region">
                               <option selected>Open this select menu</option>
