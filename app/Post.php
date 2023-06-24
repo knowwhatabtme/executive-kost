@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\Models\review;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -15,5 +15,9 @@ class Post extends Model
         return $this->belongsTo(User::class, 'nik_user', 'nik');
     }
 
+    public function review()
+    {
+        return $this->hasMany(review::class, 'id_kos', 'id');
+    }
 
 }

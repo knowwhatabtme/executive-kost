@@ -256,28 +256,42 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {{-- Card Review --}}
                                                         <div class="row mb-2">
-                                                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                                                <div class="carousel-inner">
-                                                                  <div class="carousel-item active" data-bs-interval="10000">
-                                                                    <img src="..." class="d-block w-100" alt="...">
-                                                                  </div>
-                                                                  <div class="carousel-item" data-bs-interval="2000">
-                                                                    <img src="..." class="d-block w-100" alt="...">
-                                                                  </div>
-                                                                  <div class="carousel-item">
-                                                                    <img src="..." class="d-block w-100" alt="...">
-                                                                  </div>
+                                                            <div class="card">
+                                                                <div class="card-body">
+                                                                    <div class="list-group">
+                                                                        @foreach ($p->review as $r)
+                                                                            <a  class="list-group-item list-group-item-action">
+                                                                                <div class="d-flex w-100 justify-content-between">
+                                                                                    <h5 class="mb-1">{{ $r->pereview->name }}</h5>
+                                                                                    <small>{{ $r->created_at->diffForHumans() }}</small>
+                                                                                </div>
+                                                                            <p class="mb-1">{{ $r->pesan }}</p>
+                                                                            {{-- <small>And some small print.</small> --}}
+                                                                            </a>
+                                                                        @endforeach
+                                                                    </div>
+                                                                    @auth 
+                                                                        @can('admin')
+                                                                        @else
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <form action="{{ route('review.store') }}" method="post">
+                                                                                        @csrf
+                                                                                        <input type="hidden" name="id_kos" value="{{ $p->id }}">
+                                                                                        <div class="input-group mt-2 d-flex"></div>
+                                                                                            <input type="text" name="pesan" class="form-control" placeholder="Tambah Review" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                                                            <button class="btn btn-outline-secondary" type="submit">Tambah Review</button>
+                                                                                        </div>
+                                                                                        {{-- <a href="{{ route('review.store', $p->id) }}" class="btn btn-primary">Tambah Review</a> --}}
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        @endcan
+                                                                    @endauth
                                                                 </div>
-                                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                  <span class="visually-hidden">Previous</span>
-                                                                </button>
-                                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                  <span class="visually-hidden">Next</span>
-                                                                </button>
-                                                              </div>
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <a type="button" class="btn btn-danger btn-lg"
@@ -288,9 +302,6 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer text-center">
-                                            <button class="btn btn-primary"
-                                                data-bs-target="#exampleModalToggle{{ $p->id }}2"
-                                                data-bs-toggle="modal">close</button>
                                         </div>
                                     </div>
                                 </div>

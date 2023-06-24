@@ -16,4 +16,9 @@ class PostManage extends Model
         return $this->belongsTo(User::class, 'nik_user', 'nik');
     }
 
+    public function review()
+    {
+        return $this->hasMany(review::class);
+    }
+
 }

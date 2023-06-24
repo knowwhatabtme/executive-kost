@@ -8,22 +8,6 @@
               <div class="modal-body">
                   <form action="{{ route('managepost.store') }}" method="POST" enctype="multipart/form-data">
                       @csrf
-                      {{-- <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">Judul:</label>
-              <input type="text" class="form-control" id="recipient-name" name="title">
-            </div>
-            <div class="mb-3">
-              <label for="formFileSm" class="form-label">Sampul Gambar</label>
-              <input class="form-control form-control-sm" id="formFileSm" type="file" name="picture">
-            </div>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Sub Judul:</label>
-              <textarea class="form-control" id="message-text" name="excerpt"></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Isi:</label>
-              <textarea class="form-control" id="message-text" name="body"></textarea>
-            </div> --}}
                       <div class="mb-3">
                           <label for="recipient-name" class="col-form-label">Nama Kost:</label>
                           <input type="text" class="form-control" id="recipient-name" name="namaKos">
