@@ -6,7 +6,7 @@
     <meta name="keyword" content="coronavirus,covid,medical,treatment,virus">
     <meta name="author" content="Themescare">
     <!-- Title -->
-    <title>Veteran Kost</title>
+    <title>EXECUTIVE 55</title>
     <!-- Favicon -->
     {{-- <link rel="icon" type="image/png" sizes="32x32" href="{{asset('aubna')}}/assets/img/logo-gkj.png"> --}}
     <!--Bootstrap css-->
@@ -25,6 +25,7 @@
     <!--Responsive css-->
     <link rel="stylesheet" href="{{ asset('aubna') }}/assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     {{-- <link rel="stylesheet" href="{{asset('aubna')}}/assets/css/sparkk.css"> --}}
 </head>

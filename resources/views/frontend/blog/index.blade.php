@@ -17,26 +17,6 @@
     @yield('content')
     @include('frontend.blog.partials.modal')
 
-    <section class="aubna-welcome-area">
-        <!--Content before waves-->
-        <div class="container text-center">
-            <div class="align-items-center justify-content-between ">
-                <div class="inner-header">
-                    <div class="row">
-                        <div class="col">
-                            <div class="welcome-left">
-                                <h1>Veteran Kos</h1>
-                                <p>Kosan siap huni di sekitar kampus UPNVJ</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- <div class="inner-content">
-                    
-                 </div> --}}
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="aubna-blog-area section_100">
         <div class="container-md text-center">
@@ -154,7 +134,7 @@
                                                                     <h5 class="card-title">Detail Kost</h5>
                                                                     <hr style="border: 0.5px solid #F86D08;">
                                                                     <div class="row">
-                                                                        <div class="col-3">
+                                                                        <div class="col-4">
                                                                             <p class="card-text text-center">Deskripsi :
                                                                             </p>
                                                                         </div>
@@ -216,7 +196,8 @@
                                                                     <div class="row">
                                                                         <div class="col-3">
                                                                             <p class="card-text"
-                                                                            style="font-size: 13px">Jarak Kampus :</span>
+                                                                                style="font-size: 13px">Jarak Kampus
+                                                                                :</span>
                                                                             </p>
                                                                         </div>
                                                                         <div class="col">
@@ -262,44 +243,59 @@
                                                                 <div class="card-body">
                                                                     <div class="list-group">
                                                                         @foreach ($p->review as $r)
-                                                                            <a  class="list-group-item list-group-item-action">
-                                                                                <div class="d-flex w-100 justify-content-between">
-                                                                                    <h5 class="mb-1">{{ $r->pereview->name }}</h5>
+                                                                            <a
+                                                                                class="list-group-item list-group-item-action">
+                                                                                <div
+                                                                                    class="d-flex w-100 justify-content-between">
+                                                                                    <h5 class="mb-1">
+                                                                                        {{ $r->pereview->name }}</h5>
                                                                                     <small>{{ $r->created_at->diffForHumans() }}</small>
                                                                                 </div>
-                                                                            <p class="mb-1">{{ $r->pesan }}</p>
-                                                                            {{-- <small>And some small print.</small> --}}
+                                                                                <p class="mb-1">{{ $r->pesan }}
+                                                                                </p>
+                                                                                {{-- <small>And some small print.</small> --}}
                                                                             </a>
                                                                         @endforeach
                                                                     </div>
-                                                                    @auth 
+                                                                    @auth
                                                                         @can('admin')
-                                                                    @else
-                                                                        <div class="row">
-                                                                            <div class="col">
-                                                                                <form action="{{ route('review.store') }}" method="post">
-                                                                                    @csrf
-                                                                                    <input type="hidden" name="id_kos" value="{{ $p->id }}">
-                                                                                    {{-- <div class="input-group mt-2 mb-2">
+                                                                        @else
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <form action="{{ route('review.store') }}"
+                                                                                        method="post">
+                                                                                        @csrf
+                                                                                        <input type="hidden" name="id_kos"
+                                                                                            value="{{ $p->id }}">
+                                                                                        {{-- <div class="input-group mt-2 mb-2">
                                                                                     <input type="text" name="pesan" class="form-control" placeholder="Tambah Review" aria-label="Recipient's username" aria-describedby="button-addon2">
                                                                                     <button class="btn btn-outline-secondary" type="button" id="button-addon2" type="submit">Tambah Review</button>
                                                                                     </div> --}}
-                                                                                    <div class="input-group mt-2 d-flex">
-                                                                                        <input type="text" name="pesan" class="form-control" placeholder="Tulis Review" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                                                        <button class="btn btn-outline-secondary mt-2" id="button-addon2" type="submit">Tambah Review</button>
-                                                                                     </div>
-                                                                                </form>
+                                                                                        <div class="input-group mt-2 d-flex">
+                                                                                            <input type="text"
+                                                                                                name="pesan"
+                                                                                                class="form-control"
+                                                                                                placeholder="Tulis Review"
+                                                                                                aria-label="Recipient's username"
+                                                                                                aria-describedby="button-addon2">
+                                                                                            <button
+                                                                                                class="btn btn-outline-secondary mt-2"
+                                                                                                id="button-addon2"
+                                                                                                type="submit">Tambah
+                                                                                                Review</button>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    @endcan
-                                                                @endauth
+                                                                        @endcan
+                                                                    @endauth
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    <div class="row">
-                                                        <a type="button" class="btn btn-danger btn-lg"
-                                                            href="https://wa.me/<?php echo $p->pemilik->noTelp; ?>?text=Halo%20apakah%20untuk%20<?php echo $p->namaKos; ?>%20masih%20tersedia%3F">Hubungi</a>
-                                                    </div>
+                                                        <div class="row">
+                                                            <a type="button" class="btn btn-danger btn-lg"
+                                                                href="https://wa.me/<?php echo $p->pemilik->noTelp; ?>?text=Halo%20apakah%20untuk%20<?php echo $p->namaKos; ?>%20masih%20tersedia%3F">Hubungi</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

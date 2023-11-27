@@ -1,6 +1,6 @@
  <!-- Footer Area Start -->
  <footer class="aubna-footer-area">
-    {{-- <div class="footer-top-area">
+     {{-- <div class="footer-top-area">
        <div class="container">
           <div class="row">
              <div class="col-lg-4">
@@ -51,29 +51,29 @@
           </div>
        </div>
     </div> --}}
-    <div class="footer-bottom-area">
-       <div class="container">
-          <div class="row">
-             <div class="col-lg-12">
-                <div class="copyright-inn">
-                   <p>Copyright &copy; 2023 Veteran Kost.</p>
-                </div>
+     <div class="footer-bottom-area">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="copyright-inn">
+                         <p>Copyright &copy; 2023 EXECUTIVE 55.</p>
+                     </div>
+                 </div>
              </div>
-          </div>
-       </div>
-    </div>
+         </div>
+     </div>
  </footer>
  <!-- Footer Area End -->
-  
-  
+
+
  <!-- Search Form Start -->
  <div class="search-popup">
-    <div class="search-popup__overlay custom-cursor__overlay"></div>
-    <div class="search-popup__inner">
-       <form action="#" class="search-popup__form">
-          <input type="text" name="search" placeholder="Type here to Search....">
-          <button type="submit"><i class="fa fa-search"></i></button>
-       </form>
-    </div>
+     <div class="search-popup__overlay custom-cursor__overlay"></div>
+     <div class="search-popup__inner">
+         <form action="#" class="search-popup__form">
+             <input type="text" name="search" placeholder="Type here to Search....">
+             <button type="submit"><i class="fa fa-search"></i></button>
+         </form>
+     </div>
  </div>
  <!-- Search Form End -->
