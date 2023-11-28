@@ -331,8 +331,9 @@ li {
 .section_b_80 {
 	padding-bottom: 80px
 }
-.alert{
-    border: 0px solid transparent !important
+
+.alert {
+	border: 0px solid transparent !important
 }
 
 
@@ -412,6 +413,7 @@ li {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
+
 	100% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
@@ -423,6 +425,7 @@ li {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
+
 	100% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
@@ -434,6 +437,7 @@ li {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -445,6 +449,7 @@ li {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -509,7 +514,7 @@ nav.navbar .nav-item:last-child {
 }
 
 nav.navbar .nav-item .nav-link {
-	color: rgb(255,255,255);
+	color: rgb(255, 255, 255);
 	position: relative;
 	text-decoration: none;
 	padding: 25px 7px;
@@ -1047,10 +1052,11 @@ span.is-active:after {
 }
 
 .logo img {
-	width: 120px;
+	width: 60px;
+	border-radius: 50%;
 }
 
-.card-image{
+.card-image {
 	width: 352px;
 	height: 553;
 	object-fit: cover;
@@ -1078,7 +1084,7 @@ span.is-active:after {
 	margin-top: 50px;
 }
 
-.welcome-left h1{
+.welcome-left h1 {
 	color: #000;
 	font-family: Inter;
 	font-size: 48px;
@@ -1225,6 +1231,7 @@ span.is-active:after {
 		-webkit-transform: translate3d(-90px, 0, 0);
 		transform: translate3d(-90px, 0, 0);
 	}
+
 	100% {
 		-webkit-transform: translate3d(85px, 0, 0);
 		transform: translate3d(85px, 0, 0);
@@ -1236,6 +1243,7 @@ span.is-active:after {
 		-webkit-transform: translate3d(-90px, 0, 0);
 		transform: translate3d(-90px, 0, 0);
 	}
+
 	100% {
 		-webkit-transform: translate3d(85px, 0, 0);
 		transform: translate3d(85px, 0, 0);
@@ -1407,6 +1415,7 @@ span.is-active:after {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
+
 	to {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -1418,6 +1427,7 @@ span.is-active:after {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
+
 	to {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -3666,4 +3676,3 @@ blockquote p {
 	height: 430px;
 	border: medium none
 }
-
