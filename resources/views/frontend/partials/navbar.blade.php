@@ -93,8 +93,8 @@
                 </div>
             @endcan
         @else
-            <a class="navbar-brand logo scroller" href="index.html">
-                {{-- <img src="{{asset('aubna')}}/assets/img/logo-fixed.png" alt="aubna" /> --}}
+            <a class="navbar-brand logo" href="index.html">
+                <img src="{{ asset('aubna') }}/assets/img/logo-fixed.png" alt="aubna" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
