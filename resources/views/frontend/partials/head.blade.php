@@ -8,7 +8,7 @@
     <!-- Title -->
     <title>EXECUTIVE 55</title>
     <!-- Favicon -->
-    {{-- <link rel="icon" type="image/png" sizes="32x32" href="{{asset('aubna')}}/assets/img/logo-gkj.png"> --}}
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('aubna') }}/assets/img/logo.png">
     <!--Bootstrap css-->
     <link rel="stylesheet" href="{{ asset('aubna') }}/assets/css/bootstrap.css">
     <!--Font Awesome css-->
