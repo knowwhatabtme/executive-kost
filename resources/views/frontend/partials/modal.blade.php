@@ -7,7 +7,7 @@
                         <div class="col-lg-12">
 
                             <h1>
-                                Masuk Veteran Kost
+                                Executive Kost
                             </h1>
 
 
