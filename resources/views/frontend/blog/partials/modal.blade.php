@@ -7,7 +7,7 @@
             <div class="modal-body">
                 <form action="" method="get">
                     <div class="row mb-3">
-                        <div class="col">
+                        {{-- <div class="col">
                             <label for="region" class="col-form-label">Region :</label>
                             <select class="form-select" name="region" aria-label="Default select example">
                                 <option value="">All</option>
@@ -23,7 +23,7 @@
                                 <option value="2KM">2KM</option>
                                 <option value="3KM">3KM</option>
                             </select>
-                        </div>
+                        </div> --}}
                         <div class="col">
                             <label for="jenis" class="col-form-label">Jenis kost :</label>
                             <select class="form-select" name="jenis" aria-label="Default select example">

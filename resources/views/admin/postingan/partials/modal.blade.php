@@ -26,7 +26,7 @@
                               <option value="Campur">Campur</option>
                           </select>
                       </div>
-                      <div class="mb-3">
+                      {{-- <div class="mb-3">
                           <label for="jarakKampus" class="form-label">Jarak Kampus</label>
                           <select class="form-select" id="jarakKampus" aria-label="Default select example"
                               name="jarakKampus">
@@ -43,7 +43,7 @@
                               <option value="Limo">Limo</option>
                               <option value="PD Labu">PD Labu</option>
                           </select>
-                      </div>
+                      </div> --}}
                       <div class="mb-3">
                           <label for="max_lantai" class="col-form-label">Jumlah lantai:</label>
                           <input type="number" class="form-control" id="max_lantai" name="jumLantai">

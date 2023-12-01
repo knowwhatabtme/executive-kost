@@ -183,7 +183,7 @@
                                                                                 class="badge text-bg-warning">{{ $p->jenisKos }}
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
+                                                                    {{-- <div class="row">
                                                                         <div class="col-3">
                                                                             <p class="card-text">Region :</span>
                                                                             </p>
@@ -204,7 +204,7 @@
                                                                             <span
                                                                                 class="badge text-bg-info">{{ $p->jarakKampus }}
                                                                         </div>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                     <div class="row">
                                                                         <div class="col-3">

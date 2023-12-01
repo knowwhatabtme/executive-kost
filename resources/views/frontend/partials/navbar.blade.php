@@ -12,7 +12,7 @@
         <!-- LOGO -->
         @auth
             @can('admin')
-                <a class="navbar-brand logo" href="index.html">
+                <a class="navbar-brand logo" href="/">
                     <img src="{{ asset('aubna') }}/assets/img/logo-fixed.png" alt="aubna" />
                 </a>
                 <a class="navbar-brand logo scroller" href="index.html">
@@ -52,7 +52,7 @@
                     </ul>
                 </div>
             @else
-                <a class="navbar-brand logo" href="index.html">
+                <a class="navbar-brand logo" href="/">
                     <img src="{{ asset('aubna') }}/assets/img/logo-fixed.png" alt="aubna" />
                 </a>
                 <a class="navbar-brand logo scroller" href="index.html">
@@ -93,7 +93,7 @@
                 </div>
             @endcan
         @else
-            <a class="navbar-brand logo" href="index.html">
+            <a class="navbar-brand logo" href="/">
                 <img src="{{ asset('aubna') }}/assets/img/logo-fixed.png" alt="aubna" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

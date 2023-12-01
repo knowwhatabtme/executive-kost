@@ -18,13 +18,11 @@ return new class extends Migration
             $table->string('nik_user');
             $table->string('namaKos');
             $table->text('desc');
-            $table->string('region');
             $table->string('jenisKos');
             $table->string('jumLantai');
             $table->string('jumKamar');
             $table->string('jumKamarMandi');
             $table->string('address');
-            $table->string('jarakKampus');
             $table->string('jalurTransport');
             $table->string('fasilitas_kamar');
             $table->string('fasilitas_sekitar');
